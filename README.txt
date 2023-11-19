@@ -1,13 +1,16 @@
-BBDD
+Datos de los usuarios:
 
-//Augusto Veniam - Presidente
+--Augusto Veniam - Presidente
 aug.veniam@gmail.com
 
-//Galit Guzman - Secretaria
+--Galit Guzman - Secretaria
 gal.guzman@gmail.com
 
-//Suzana Labor - Tesorera
+--Suzana Labor - Tesorera
 suz.labor@gmail.com
 
-//Rick Parker - Miembro General
+--Rick Parker - Miembro General
 ric.parker@gmail.com
+
+--Lautaro Puentes - Vecino
+lau.puentes@gmail.com

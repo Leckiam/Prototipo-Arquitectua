@@ -127,11 +127,6 @@ export function cargarIndex(isDirectiva) {
                 </a>
             </figure>
         </section>
-        <footer>
-            <div class="container">
-                <p>&copy; Junta de vecinos 2023</p>
-            </div>
-        </footer>
     `;
     document.getElementById('contentIndex').innerHTML = content;
 }

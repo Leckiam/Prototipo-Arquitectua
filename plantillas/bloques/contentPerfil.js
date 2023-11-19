@@ -1,10 +1,10 @@
-import { getUsuarios as getUsers, getRoles} from './infoUsers.js';
+import { getUsuarios as getUsers, getRoles } from './infoUsers.js';
 
 export function cargarVerPerfil(numRol) {
     let listaUsuarios = getUsers();
     let listaRoles = getRoles();
     let user = listaUsuarios[numRol];
-    
+
     let content = `<br>
         <h1>${listaRoles[numRol]}</h1>
         <div class="contenedor">

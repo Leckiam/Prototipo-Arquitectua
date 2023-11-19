@@ -21,7 +21,7 @@ function getUser(correo){
         window.location.href=urlBase+"Tesorero/index.html"
     } else if (correo.toLowerCase()=='ric.parker@gmail.cl') {
         //Rick Parker - Miembro General
-        window.location.href=urlBase+"../miembGeneral/index.html"
+        window.location.href=urlBase+"../MiembGeneral/index.html"
     } else {
         alert('No existe ningun miembro registrado con estos datos')
     }
