@@ -1,10 +1,22 @@
 import { getUsuarios as getUsers, getRoles } from './infoUsers.js';
 
 export function cargarVerPerfil(numRol) {
+    class Usuario {
+        constructor(rut, correo, nombre, edad, celular, direccion) {
+            this.rut = rut;
+            this.correo = correo;
+            this.nombre = nombre;
+            this.edad = edad;
+            this.celular = celular;
+            this.direccion = direccion;
+        }
+    }
     let listaUsuarios = getUsers();
     let listaRoles = getRoles();
     let user = listaUsuarios[numRol];
-
+    console.log(listaUsuarios)
+    console.log(user)
+    console.log(user.rut)
     let content = `<br>
         <h1>${listaRoles[numRol]}</h1>
         <div class="contenedor">
