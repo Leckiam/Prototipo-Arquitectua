@@ -10,16 +10,16 @@ function validarLogin(){
 }
 function getUser(correo){
     const urlBase = "../Directiva/";
-    if (correo.toLowerCase()=='aug.veniam@gmail.cl') {
+    if (correo.toLowerCase()=='aug.veniam@gmail.com') {
         //Augusto Veniam - Presidente
         window.location.href=urlBase+"Presidente/index.html"
-    } else if (correo.toLowerCase()=='gal.guzman@gmail.cl'){
+    } else if (correo.toLowerCase()=='gal.guzman@gmail.com'){
         //Galit Guzman - Secretaria
         window.location.href=urlBase+"Secretario/index.html"
-    } else if (correo.toLowerCase()=='suz.labor@gmail.cl'){
+    } else if (correo.toLowerCase()=='suz.labor@gmail.com'){
         //Suzana Labor - Tesorera
         window.location.href=urlBase+"Tesorero/index.html"
-    } else if (correo.toLowerCase()=='ric.parker@gmail.cl') {
+    } else if (correo.toLowerCase()=='ric.parker@gmail.com') {
         //Rick Parker - Miembro General
         window.location.href=urlBase+"../MiembGeneral/index.html"
     } else {
