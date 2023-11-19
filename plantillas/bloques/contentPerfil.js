@@ -13,7 +13,7 @@ export function cargarVerPerfil(numRol) {
     }
     let listaUsuarios = getUsers();
     let listaRoles = getRoles();
-    let user = listaUsuarios[numRol];
+    let user = typeof listaUsuarios[numRol];
     console.log(listaUsuarios)
     console.log(user)
     console.log(user.rut)
