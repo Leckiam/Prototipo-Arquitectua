@@ -1,20 +1,22 @@
+import { getRoles } from './infoUsers';
+
 export function cargarNavBar(isLogin,nameUser,rol){
     function logOut(space){
         window.location.href="../"+space+"Guest/index.html"
     }
-    
-    let logOut = "";
+    let listaRoles = getRoles();
+    let btnLogOut = "";
     let gestionar =""
     let navBar = "";
     let space="";
     const rutaCompleta = window.location.pathname;
     const nombreArchivo = rutaCompleta.substring(rutaCompleta.lastIndexOf('/') + 1);
-    if (rol!='General' && rol!='') {
+    if (rol >= 2) {
         space="../"
     }
     
     if (isLogin) {
-        logOut=`
+        btnLogOut=`
         <li class="nav-item dropdown" style="width: 150px;">
           <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" style="color: #ffffff;" aria-expanded="false">
           ${nameUser}
@@ -27,12 +29,12 @@ export function cargarNavBar(isLogin,nameUser,rol){
           </ul>
         </li>`;
     } else {
-        logOut= `
+        btnLogOut= `
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="login.html">Iniciar Sesion</a>
             </li>`;
     }
-    if (rol!='General' && rol!=''){
+    if (rol >= 2){
         gestionar = `
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: #ffffff;" aria-expanded="false">
@@ -110,7 +112,7 @@ export function cargarNavBar(isLogin,nameUser,rol){
         </li>`;
         navBar = navBar + optSolicitud;
     }
-    navBar= navBar+gestionar+logOut
+    navBar= navBar+gestionar+btnLogOut
     navBar = navBar + `
             </ul>
         </div>

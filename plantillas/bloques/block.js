@@ -1,9 +1,9 @@
-import { cargarNavBar } from './navBarHead';
+import { cargarNavBar as carNavBar } from './navBarHead';
 import { cargarFooter as carFooter} from './footer';
 import { cargarIndex as carIndex } from './contentIndex';
 import { cargarVerPerfil as carPerfil } from './contentPerfil';
 
-function cargarHead(){
+export function cargarHead(){
     let headDefault=document.getElementById("headBlock").innerHTML;
     document.getElementById("headBlock").innerHTML= headDefault+`
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -12,15 +12,15 @@ function cargarHead(){
     `;
 };
 
-function cargarNavBar(isLogin,nameUser,rol){
+export function cargarNavBar(isLogin,nameUser,rol){
     carNavBar(isLogin,nameUser,rol);
 }
-function cargarFooter(){
+export function cargarFooter(){
     carFooter();
 }
-function cargarIndex(){
+export function cargarIndex(){
     carIndex();
 }
-function cargarVerPerfil(){
+export function cargarVerPerfil(){
     carPerfil();
 }
