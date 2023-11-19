@@ -1,6 +1,7 @@
 import { getUsuarios as getUsers, getRoles } from './infoUsers.js';
 
 export function cargarVerPerfil(numRol) {
+    console.log('verPerfil:'+numRol);
     class Usuario {
         constructor(rut, correo, nombre, edad, celular, direccion) {
             this.rut = rut;

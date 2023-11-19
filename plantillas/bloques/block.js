@@ -18,9 +18,10 @@ export function cargarNavBar(isLogin, nameUser, rol) {
 export function cargarFooter() {
     carFooter();
 }
-export function cargarIndex() {
-    carIndex();
+export function cargarIndex(isDirectiva) {
+    carIndex(isDirectiva);
 }
-export function cargarVerPerfil() {
-    carPerfil();
+export function cargarVerPerfil(numRol) {
+    console.log('block:'+numRol);
+    carPerfil(numRol);
 }
