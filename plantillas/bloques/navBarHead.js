@@ -1,4 +1,4 @@
-import { getRoles } from './infoUsers';
+import { getRoles } from './infoUsers.js';
 
 export function cargarNavBar(isLogin,nameUser,rol){
     function logOut(space){

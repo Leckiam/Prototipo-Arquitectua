@@ -1,4 +1,4 @@
-import { getUsuarios as getUsers, getRoles} from './infoUsers';
+import { getUsuarios as getUsers, getRoles} from './infoUsers.js';
 
 export function cargarVerPerfil(numRol) {
     let listaUsuarios = getUsers();
