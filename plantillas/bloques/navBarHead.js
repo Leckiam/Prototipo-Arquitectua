@@ -1,10 +1,7 @@
 import { getRoles } from './infoUsers.js';
 
 export function cargarNavBar(isLogin, nameUser, numRol) {
-    console.log('navBar:'+numRol);
-    function logOut(space) {
-        window.location.href = "../" + space + "Guest/index.html"
-    }
+    console.log('navBar:'+numRol)
     let listaRoles = getRoles();
     let nameRol = listaRoles[numRol];
     let btnLogOut = "";

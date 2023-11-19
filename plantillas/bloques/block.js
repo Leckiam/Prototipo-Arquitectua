@@ -11,7 +11,9 @@ export function cargarHead() {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     `;
 };
-
+export function logOut(space) {
+    window.location.href = "../" + space + "Guest/index.html"
+}
 export function cargarNavBar(isLogin, nameUser, rol) {
     carNavBar(isLogin, nameUser, rol);
 }
