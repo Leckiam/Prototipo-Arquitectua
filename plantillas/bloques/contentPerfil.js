@@ -14,7 +14,10 @@ export function cargarVerPerfil(numRol) {
     let listaUsuarios = getUsers();
     let listaRoles = getRoles();
     let user = listaUsuarios[numRol];
+    console.log(numRol)
+    console.log(listaUsuarios)
     console.log(listaUsuarios[1])
+    console.log(listaUsuarios[1].rut)
     console.log(user)
     console.log(user.rut)
     let content = `<br>
