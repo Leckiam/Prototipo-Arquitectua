@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title></title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet" href="../../static/css/styleSolicitud.css">
+    <script src="../../static/js/jsSolicitarProject.js"></script>
+
+</head>
+<body>
+    <br><br><br>
+    <form action="" class="formulario" id="formLogin">
+        <h1>Solicitar Proyecto</h1>
+        <div class="contenedor">
+            <div class="input-contenedor">
+                <i class="fas fa-file-alt icon"></i>
+                <input type="text" placeholder="Tipo de proyecto" id="tipoProject">
+            </div>
+            <div class="input-contenedor">
+                <textarea name="descProject" id="descProject" cols="30" rows="10" placeholder="Descripción"></textarea>
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-compass icon"></i>
+                <input type="text" placeholder="Lugar" id="lugar">
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-calendar icon"></i>
+                <input type="date" id="fechaProject">
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-dollar-sign icon"></i>
+                <input type="number" placeholder="Costo aproximado" id="costoTotal">
+            </div>
+            <input type="submit" value="Envíar Solicitud" class="button" id="btnLogReg" onclick="validarForm()"><br><br>
+            <a href="index.html"><input type="" style="text-align: center;" value="Cancelar" class="button" readonly></a>
+        </div>
+    </form>
+</body>
+</html>

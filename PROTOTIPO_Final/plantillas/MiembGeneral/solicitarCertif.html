@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title></title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet" href="../../static/css/styleSolicitud.css">
+    <script src="../../static/js/jsSolicitarCertif.js"></script>
+
+</head>
+<body>
+    <br><br><br>
+    <form action="" class="formulario" id="formLogin">
+        <h1>Solicitar Certificado</h1>
+        <div class="contenedor">
+            <div class="input-contenedor">
+                <i class="fas fa-file-alt icon"></i>
+                <select name="certficado" id="tipoCertific">
+                    <option value="1" selected>Certificado de residencia</option>
+                    <option>Certificado de antecedentes vecinales</option>
+                </select>
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" placeholder="Nombre" id="nombre">
+            </div>
+            <div class="input-contenedor" id="envioCopia" style="display: none;">
+                <i class="fas fa-user icon"></i>
+                <input type="email" placeholder="Correo" id="correo">
+            </div>
+            <div>
+                <input type="checkbox" name="term" value="AceptarTerm" id="chkTerm" onchange="permitirCopia()">
+                <label for="term">Deseo recibir una copia del certificado al correo.</label>
+            </div>
+            <input type="submit" value="Envíar Solicitud" class="button" id="btnLogReg" onclick="validarForm()"><br><br>
+            <a href="index.html"><input type="" style="text-align: center;" value="Cancelar" class="button" readonly></a>
+        </div>
+    </form>
+</body>
+</html>

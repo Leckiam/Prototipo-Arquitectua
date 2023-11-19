@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background:url("../img/Directiva/wallpaperProyectos.jpg");
+    background-size: cover;
+}
+.btnAprob{
+    background:#009726 !important;
+    border: none;
+    color: #ffffff;
+    padding: 10px 15px;
+}
+.btnRecha{
+    background:#970000 !important;
+    border: none;
+    color: #ffffff;
+    padding: 10px 15px;
+}
+.btnVerProject{
+    background:#006097 !important;
+    border: none;
+    color: #ffffff;
+    padding: 10px 15px;
+}
+.ml-auto-custom {
+    margin-left: auto;
+}
