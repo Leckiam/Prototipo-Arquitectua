@@ -1,7 +1,7 @@
-import { cargarNavBar as carNavBar } from './navBarHead';
-import { cargarFooter as carFooter} from './footer';
-import { cargarIndex as carIndex } from './contentIndex';
-import { cargarVerPerfil as carPerfil } from './contentPerfil';
+import { cargarNavBar as carNavBar } from './navBarHead.js';
+import { cargarFooter as carFooter} from './footer.js';
+import { cargarIndex as carIndex } from './contentIndex.js';
+import { cargarVerPerfil as carPerfil } from './contentPerfil.js';
 
 export function cargarHead(){
     let headDefault=document.getElementById("headBlock").innerHTML;
