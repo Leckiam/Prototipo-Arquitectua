@@ -24,7 +24,7 @@ export function cargarNavBar(isLogin,nameUser,rol){
           <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="verPerfil.html">Ver Perfil</a>
-            <a class="dropdown-item" onclick="logOut('${space}')">Cerrar Sesión</a>
+            <a class="dropdown-item" onclick="${logOut(space)}">Cerrar Sesión</a>
             </li>
           </ul>
         </li>`;
