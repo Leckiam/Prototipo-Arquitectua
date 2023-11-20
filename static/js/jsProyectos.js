@@ -4,7 +4,6 @@ function infoProyecto(listaInfo,index) {
         <td style="width: 60px;">P-${index}</td>
         <td>${listaInfo[0]}</td>
         <td>${listaInfo[1]}</td>
-        <td><button type="button" class="btnVerProject rounded">Ver Detalle</button></td>
         <td>${listaInfo[2]}</td>
         <td>${listaInfo[3]}</td>
         <td><button type="button" class="btnAprob rounded"><a onclick="aprobarProyecto(${index},'${listaInfo[1]}')">Aprobar</a></button></td>

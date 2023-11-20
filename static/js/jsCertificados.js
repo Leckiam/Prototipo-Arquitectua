@@ -62,5 +62,4 @@ function verDetalleCertif(boolean){
     } else {
         certificados.innerHTML = respaldoCertif.innerHTML;
     }
-    
 }
