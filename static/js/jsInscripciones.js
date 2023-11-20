@@ -7,15 +7,13 @@ let listaUsuarios = [
     ['21.345.678-K', 'cri.sandia@gmail.com', 'Cristopher Sandia', 29, 912345678, 'Condominio Costa del Mar - Manuel Francke, Quintero'],
 ];
 function infoInscripcion(listaInfo,index) {
-    console.log(listaInfo[1]);
-    console.log(listaInfo[1][2]);
     let nombre = listaInfo[1][2];
     let itemProjectContenido = `
     <tr style="background: #d1d1d1; text-align: center;" class="item${index}">
         <td style="width: 60px;">I-${index}</td>
         <td>${listaInfo[0]}</td>
         <td>${nombre}</td>
-        <td><button type="button" class="btnVerProject rounded" onclick="verDetalleInscript(true,'${listaInfo[1]}')">Ver Datos</button></td>
+        <td><button type="button" class="btnVerProject rounded" onclick="verDetalleInscript(true,'${JSON.stringify(listaInfo[1])}')">Ver Datos</button></td>
         <td><button type="button" class="btnAprob rounded"><a onclick="aprobar(${index},'${nombre}')">Aprobar</a></button></td>
         <td><input style="width:100%;height: auto;padding: 0px;" value="" id="justific${index}"></td>
         <td><button type="button" class="btnRecha rounded"><a onclick="rechazar(${index},'${nombre}')">Rechazar</a></button></td>
