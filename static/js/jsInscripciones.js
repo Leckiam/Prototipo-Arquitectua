@@ -10,11 +10,11 @@ function infoInscripcion(listaInfo,index) {
     <tr style="background: #d1d1d1; text-align: center;" class="item${index}">
         <td style="width: 60px;">I-${index}</td>
         <td>${listaInfo[0]}</td>
-        <td>${listaInfo[2]}</td>
-        <td><button type="button" class="btnVerProject rounded">Ver Datos</button></td>
-        <td><button type="button" class="btnAprob rounded"><a onclick="aprobar(${index},'${listaInfo[2]}')">Aprobar</a></button></td>
+        <td>${listaInfo[1][2]}</td>
+        <td><button type="button" class="btnVerProject rounded" onclick="verDetalleInscript(true)">Ver Datos</button></td>
+        <td><button type="button" class="btnAprob rounded"><a onclick="aprobar(${index},'${listaInfo[1][2]}')">Aprobar</a></button></td>
         <td><input style="width:100%;height: auto;padding: 0px;" value="" id="justific${index}"></td>
-        <td><button type="button" class="btnRecha rounded"><a onclick="rechazar(${index},'${listaInfo[2]}')">Rechazar</a></button></td>
+        <td><button type="button" class="btnRecha rounded"><a onclick="rechazar(${index},'${listaInfo[1][2]}')">Rechazar</a></button></td>
     </tr>
     `;
     return itemProjectContenido;
