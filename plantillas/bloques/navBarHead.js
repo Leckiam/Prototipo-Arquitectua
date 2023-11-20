@@ -62,20 +62,20 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
     //Listar Opciones del NavBar
     let listaOpt = ['Inicio', 'Nosotros', 'Directiva', 'Noticias', 'Actividades'];
     for (let i = 0; i < listaOpt.length; i++) {
-        let href = listaOpt[i] + ".html";
+        let href = listaOpt[i].toLowerCase(); + ".html";
         if (nombreArchivo == 'index.html') {
             if (listaOpt[i] == 'Inicio' || listaOpt[i] == 'Directiva') {
                 href = "#" + listaOpt[i].toLowerCase();
             }
             navBar = navBar + `
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i].toLowerCase(); + `</a>
+                    <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i] + `</a>
                 </li>`
         } else {
             if (!(listaOpt[i] == 'Inicio' || listaOpt[i] == 'Directiva')) {
                 navBar = navBar + `
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i].toLowerCase(); + `</a>
+                    <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i] + `</a>
                 </li>`
             }
         }
