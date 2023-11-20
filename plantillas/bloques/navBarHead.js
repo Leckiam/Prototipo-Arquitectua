@@ -63,6 +63,9 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
     let listaOpt = ['Inicio', 'Nosotros', 'Noticias', 'Actividades'];
     for (let i = 0; i < listaOpt.length; i++) {
         let href = listaOpt[i].toLowerCase() + ".html";
+        if (listaOpt[i]=='Inicio'){
+            href = 'index.html'
+        }
         navBar = navBar + `
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i] + `</a>
