@@ -4,6 +4,7 @@ let listaUsuarios = [
     ['20.345.678-K', 'alf.asfalto@gmail.com', 'Alfredo Asfalto', 24, 912344321, 'Condominio Costa del Mar - Manuel Francke, Quintero'],
     ['21.345.696-K', 'mar.tirado@gmail.com', 'Marcelo Tirado', 20, 912438765, 'Condominio Costa del Mar - Manuel Francke, Quintero'],
     ['21.345.678-K', 'mat.polako@gmail.com', 'Matías Polako', 29, 912345678, 'Condominio Costa del Mar - Manuel Francke, Quintero'],
+    ['21.345.678-K', 'cri.sandia@gmail.com', 'Cristopher Sandia', 29, 912345678, 'Condominio Costa del Mar - Manuel Francke, Quintero'],
 ];
 function infoInscripcion(listaInfo,index) {
     console.log(listaInfo[1]);
