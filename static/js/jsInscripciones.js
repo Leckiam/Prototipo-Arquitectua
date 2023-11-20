@@ -8,8 +8,8 @@ let listaUsuarios = [
 ];
 function infoInscripcion(listaInfo,index) {
     console.log(listaInfo[1]);
-    console.log(JSON.parse(listaInfo[1])[2]);
-    let nombre = JSON.parse(listaInfo[1])[2];
+    console.log(listaInfo[1][2]);
+    let nombre = listaInfo[1][2];
     let itemProjectContenido = `
     <tr style="background: #d1d1d1; text-align: center;" class="item${index}">
         <td style="width: 60px;">I-${index}</td>
@@ -25,12 +25,12 @@ function infoInscripcion(listaInfo,index) {
 }
 function addDatoTabla(){
     let table = document.getElementById('solicitudes');
-    let dato1 = ['15-10-2023',JSON.stringify(listaUsuarios[0])];
-    let dato2 = ['15-10-2023',JSON.stringify(listaUsuarios[1])];
-    let dato3 = ['15-10-2023',JSON.stringify(listaUsuarios[2])];
-    let dato4 = ['15-10-2023',JSON.stringify(listaUsuarios[3])];
-    let dato5 = ['15-10-2023',JSON.stringify(listaUsuarios[4])];
-    let dato6 = ['15-10-2023',JSON.stringify(listaUsuarios[5])];
+    let dato1 = ['15-10-2023',listaUsuarios[0]];
+    let dato2 = ['15-10-2023',listaUsuarios[1]];
+    let dato3 = ['15-10-2023',listaUsuarios[2]];
+    let dato4 = ['15-10-2023',listaUsuarios[3]];
+    let dato5 = ['15-10-2023',listaUsuarios[4]];
+    let dato6 = ['15-10-2023',listaUsuarios[5]];
     let listaProyecto=[dato1,dato2,dato3,dato4,dato5,dato6];
     for (let i = 0; i < listaProyecto.length; i++) {
         console.log(listaProyecto);
@@ -65,7 +65,6 @@ function rechazar(id,nombre){
 
 function verDetalleInscript(boolean, listaInfo){
     console.log(listaInfo)
-    let listaSoli = JSON.parse(listaInfo);
     let inscripts = document.getElementsByClassName('container')[0];
     if (boolean==true) {
         respaldoInscript = inscripts.cloneNode(true);
