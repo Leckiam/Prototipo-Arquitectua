@@ -30,11 +30,11 @@ function aprobarProyecto(id,nombre){
     let table = document.getElementById('proyectos');
     let item = table.getElementsByClassName('item'+id)
     alert('El proyecto P-'+id+' '+nombre+' ha sido aprobado')
-    item.remove();
+    item[0].remove();
 }
 function rechazarProyecto(id,nombre){
     let table = document.getElementById('proyectos');
     let item = table.getElementsByClassName('item'+id)
     alert('El proyecto P-'+id+' '+nombre+' ha sido rechazado')
-    item.remove();
+    item[0].remove();
 }

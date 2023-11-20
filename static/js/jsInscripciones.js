@@ -44,7 +44,7 @@ function aprobar(id,nombre){
     let table = document.getElementById('solicitudes');
     let item = table.getElementsByClassName('item'+id)
     alert('La Inscripción I-'+id+' '+nombre+' ha sido aprobado')
-    item.remove();
+    item[0].remove();
 }
 function validarJustificacion(id){
     let justific = document.getElementById('justific'+id);
@@ -59,7 +59,7 @@ function rechazar(id,nombre){
     let item = table.getElementsByClassName('item'+id)
     if (validarJustificacion(id)) {
         alert('La Inscripción I-'+id+' '+nombre+' ha sido rechazada')
-        item.remove();
+        item[0].remove();
     }
 }
 
