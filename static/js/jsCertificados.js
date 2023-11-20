@@ -6,7 +6,7 @@ function infoCertificado(listaInfo,index) {
         <td style="width: 60px;">C-${index}</td>
         <td>${listaInfo[0]}</td>
         <td>${listaInfo[1]}</td>
-        <td><button type="button" class="btnVerProject rounded">Ver Datos</button></td>
+        <td><button type="button" class="btnVerProject rounded" onclick="verDetalleCertif(true)">Ver Detalle</button></td>
         <td><button type="button" class="btnAprob rounded"><a onclick="aprobar(${index},'${listaInfo[1]}')">Aprobar</a></button></td>
         <td><input style="width:100%;height: auto;padding: 0px;" value="" id="justific${index}"></td>
         <td><button type="button" class="btnRecha rounded"><a onclick="rechazar(${index},'${listaInfo[1]}')">Rechazar</a></button></td>
@@ -54,7 +54,7 @@ function verDetalleCertif(boolean){
     if (boolean==true) {
         respaldoCertif = certificados.cloneNode(true);
         certificados.innerHTML= `
-            <button class="rounded" style="background-color: black; color: #ffffff;">Volver</button>
+            <button class="rounded" style="background-color: black; color: #ffffff;" onclick="verDetalleCertif(false)">Volver</button>
             <div style="display: flex; justify-content: center; align-items: center;">
                 <img src="static/img/certificados/certificado de residencia.png" alt="" height="750">
             </div>

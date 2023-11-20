@@ -1,10 +1,10 @@
 export function cargarFooter() {
-    content = `
+    let footer = `
         <footer>
             <div class="container">
                 <p>&copy; Junta de vecinos 2023</p>
             </div>
         </footer>
     `;
-    document.getElementById("navBarBlock").innerHTML = navBar;
+    document.body = footer;
 }
