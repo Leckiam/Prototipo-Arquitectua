@@ -13,7 +13,7 @@ export function cargarHead() {
         function logOut(space) {
             window.location.href = "../" + space + "Guest/index.html";
         }
-    <script>
+    </script>
     `;
 };
 export function cargarNavBar(isLogin, nameUser, rol) {
