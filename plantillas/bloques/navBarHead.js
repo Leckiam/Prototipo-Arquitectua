@@ -60,7 +60,7 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto-custom">`;
     //Listar Opciones del NavBar
-    let listaOpt = ['Inicio', 'Nosotros', 'Directiva', 'Noticias', 'Actividades'];
+    let listaOpt = ['Inicio', 'Nosotros', 'Noticias', 'Actividades'];
     for (let i = 0; i < listaOpt.length; i++) {
         let href = listaOpt[i].toLowerCase() + ".html";
         navBar = navBar + `
