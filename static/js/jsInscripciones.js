@@ -64,33 +64,33 @@ function verDetalleInscript(boolean, index){
     if (boolean==true) {
         respaldoInscript = inscripts.cloneNode(true);
         inscripts.innerHTML= `
-            <button class="rounded" style="background-color: black; color: #ffffff; padding: 5px" onclick="verDetalleInscript(false)">Volver</button>
+            <button class="rounded" style="background-color: black; color: #ffffff; padding: 5px" onclick="verDetalleInscript(false,0)">Volver</button>
             <div class="row mb-3 respond">
                 <table class="table table-bordered" id="solicitudes">
                     <thead class="table-dark" style="text-align: center;">
                         <tr>
                             <td scope="col">RUT</td>
-                            <td scope="col" style="background: #d1d1d1;color: 000000;">${listaInfo[0]}</td>
+                            <td scope="col" style="background: #fff;color: #000000;">${listaInfo[0]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Correo</td>
-                            <td scope="col" style="background: #d1d1d1;color: 000000;">${listaInfo[1]}</td>
+                            <td scope="col" style="background: #fff;color: #000000;">${listaInfo[1]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Nombre</td>
-                            <td scope="col" style="background: #d1d1d1;color: 000000;">${listaInfo[2]}</td>
+                            <td scope="col" style="background: #fff;color: #000000;">${listaInfo[2]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Edad</td>
-                            <td scope="col" style="background: #d1d1d1;color: 000000;">${listaInfo[3]}</td>
+                            <td scope="col" style="background: #fff;color: #000000;">${listaInfo[3]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Celular</td>
-                            <td scope="col" style="background: #d1d1d1;color: 000000;">${listaInfo[4]}</td>
+                            <td scope="col" style="background: #fff;color: #000000;">${listaInfo[4]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Domicilio</td>
-                            <td scope="col" style="background: #d1d1d1;color: 000000;">${listaInfo[5]}</td>
+                            <td scope="col" style="background: #fff;color: #000000;">${listaInfo[5]}</td>
                         </tr>
                     </thead>
                 </table>
