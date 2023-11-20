@@ -6,12 +6,14 @@ let listaUsuarios = [
     ['21.345.678-K', 'mat.polako@gmail.com', 'Matías Polako', 29, 912345678, 'Condominio Costa del Mar - Manuel Francke, Quintero'],
 ];
 function infoInscripcion(listaInfo,index) {
+    console.log(listaInfo[1]);
+    console.log(listaInfo[1][2]);
     let itemProjectContenido = `
     <tr style="background: #d1d1d1; text-align: center;" class="item${index}">
         <td style="width: 60px;">I-${index}</td>
         <td>${listaInfo[0]}</td>
         <td>${listaInfo[1][2]}</td>
-        <td><button type="button" class="btnVerProject rounded" onclick="verDetalleInscript(true)">Ver Datos</button></td>
+        <td><button type="button" class="btnVerProject rounded" onclick="verDetalleInscript(true,${listaInfo[1]})">Ver Datos</button></td>
         <td><button type="button" class="btnAprob rounded"><a onclick="aprobar(${index},'${listaInfo[1][2]}')">Aprobar</a></button></td>
         <td><input style="width:100%;height: auto;padding: 0px;" value="" id="justific${index}"></td>
         <td><button type="button" class="btnRecha rounded"><a onclick="rechazar(${index},'${listaInfo[1][2]}')">Rechazar</a></button></td>
@@ -56,6 +58,7 @@ function rechazar(id,nombre){
 }
 
 function verDetalleInscript(boolean, listaInfo){
+    console.log(listaInfo)
     let certificados = document.getElementsByClassName('container')[0];
     if (boolean==true) {
         respaldoCertif = certificados.cloneNode(true);
@@ -66,27 +69,27 @@ function verDetalleInscript(boolean, listaInfo){
                     <thead class="table-dark" style="text-align: center;">
                         <tr>
                             <td scope="col">RUT</td>
-                            <td scope="col">${listaInfo[1][0]}</td>
+                            <td scope="col">${listaInfo[0]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Correo</td>
-                            <td scope="col">${listaInfo[1][1]}</td>
+                            <td scope="col">${listaInfo[1]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Nombre</td>
-                            <td scope="col">${listaInfo[1][2]}</td>
+                            <td scope="col">${listaInfo[2]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Edad</td>
-                            <td scope="col">${listaInfo[1][3]}</td>
+                            <td scope="col">${listaInfo[3]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Celular</td>
-                            <td scope="col">${listaInfo[1][4]}</td>
+                            <td scope="col">${listaInfo[4]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Domicilio</td>
-                            <td scope="col">${listaInfo[1][5]}</td>
+                            <td scope="col">${listaInfo[5]}</td>
                         </tr>
                     </thead>
                 </table>
