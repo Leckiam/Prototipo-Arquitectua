@@ -6,7 +6,7 @@ function infoCertificado(listaInfo,index) {
         <td style="width: 60px;">C-${index}</td>
         <td>${listaInfo[0]}</td>
         <td>${listaInfo[1]}</td>
-        <td><button type="button" class="btnVerProject rounded" onclick="verDetalleCertif(true)">Ver Detalle</button></td>
+        <td><button type="button" class="btnVerProject rounded" onclick="verDetalleCertif(true,${listaInfo[2]})">Ver Detalle</button></td>
         <td><button type="button" class="btnAprob rounded"><a onclick="aprobar(${index},'${listaInfo[1]}')">Aprobar</a></button></td>
         <td><input style="width:100%;height: auto;padding: 0px;" value="" id="justific${index}"></td>
         <td><button type="button" class="btnRecha rounded"><a onclick="rechazar(${index},'${listaInfo[1]}')">Rechazar</a></button></td>
@@ -16,12 +16,12 @@ function infoCertificado(listaInfo,index) {
 }
 function addDatoTabla(){
     let table = document.getElementById('solicitudes');
-    let dato1 = ['15-10-2023','Certificado de residencia'];
-    let dato2 = ['15-10-2023','Certificado de historial vecinal'];
-    let dato3 = ['15-10-2023','Certificado de residencia'];
-    let dato4 = ['15-10-2023','Certificado de historial vecinal'];
-    let dato5 = ['15-10-2023','Certificado de residencia'];
-    let dato6 = ['15-10-2023','Certificado de historial vecinal'];
+    let dato1 = ['15-10-2023','Certificado de residencia',1];
+    let dato2 = ['15-10-2023','Certificado de historial vecinal',2];
+    let dato3 = ['15-10-2023','Certificado de residencia',1];
+    let dato4 = ['15-10-2023','Certificado de historial vecinal',2];
+    let dato5 = ['15-10-2023','Certificado de residencia',1];
+    let dato6 = ['15-10-2023','Certificado de historial vecinal',2];
     let listaProyecto=[dato1,dato2,dato3,dato4,dato5,dato6];
     for (let i = 0; i < listaProyecto.length; i++) {
         table.innerHTML = table.innerHTML + infoCertificado(listaProyecto[i],i);
@@ -49,14 +49,20 @@ function rechazar(id,nombre){
         item[0].remove();
     }
 }
-function verDetalleCertif(boolean){
+function verDetalleCertif(boolean,idImg){
     let certificados = document.getElementsByClassName('container')[0];
+    let src = "";
+    if (idImg==1) {
+        src="../../../static/img/certificados/certificado-de-residencia.png";
+    } else if (idImg==2) {
+        src="../../../static/img/certificados/certificado-de-antecedentes-penales-para-fines-especiales.png";
+    }
     if (boolean==true) {
         respaldoCertif = certificados.cloneNode(true);
         certificados.innerHTML= `
             <button class="rounded" style="background-color: black; color: #ffffff;" onclick="verDetalleCertif(false)">Volver</button>
             <div style="display: flex; justify-content: center; align-items: center;">
-                <img src="../../../static/img/certificados/certificado de residencia.png" alt="" height="750">
+                <img src="${src}" alt="" height="750">
             </div>
         `;
     } else {
