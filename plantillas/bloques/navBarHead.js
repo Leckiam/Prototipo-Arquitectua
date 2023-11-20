@@ -63,22 +63,10 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
     let listaOpt = ['Inicio', 'Nosotros', 'Directiva', 'Noticias', 'Actividades'];
     for (let i = 0; i < listaOpt.length; i++) {
         let href = listaOpt[i].toLowerCase(); + ".html";
-        if (nombreArchivo == 'index.html') {
-            if (listaOpt[i] == 'Inicio' || listaOpt[i] == 'Directiva') {
-                href = "#" + listaOpt[i].toLowerCase();
-            }
-            navBar = navBar + `
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i] + `</a>
-                </li>`
-        } else {
-            if (!(listaOpt[i] == 'Inicio' || listaOpt[i] == 'Directiva')) {
-                navBar = navBar + `
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i] + `</a>
-                </li>`
-            }
-        }
+        navBar = navBar + `
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i] + `</a>
+            </li>`;
     }
     if (numRol >= 0 && numRol <= 1) {
         const a_projectos = `<a class="dropdown-item" href="solicitarProject.html">Proyectos</a>`;
