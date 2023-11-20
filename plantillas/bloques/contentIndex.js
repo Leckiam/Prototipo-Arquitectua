@@ -42,7 +42,7 @@ export function cargarIndex(isDirectiva) {
             </p>
             </div>
             <p>¿Quieres saber mas sobre lo que hacemos o sobre nuestros objetivos? Presione en saber mas.</p>
-            <a href="nosotros.html" class="btn">Saber más</a>
+            <a href="nosotros.html" class="btn-more-info">Saber más</a>
             <br><br>
         </section>
         <section class="content sau" id="Directiva">
@@ -95,7 +95,7 @@ export function cargarIndex(isDirectiva) {
             infraestructura local hasta eventos comunitarios emocionantes.
             </p>
             </div>
-            <a href="noticias.html" class="btn">Saber más</a>
+            <a href="noticias.html" class="btn-more-info">Saber más</a>
             <br><br>
     
         </section>
@@ -113,7 +113,7 @@ export function cargarIndex(isDirectiva) {
                 diseñada para abordar las diversas necesidades e intereses de nuestra comunidad.
                 </p>
     
-                <a href="actividades.html" class="btn">Saber más</a>
+                <a href="actividades.html" class="btn-more-info">Saber más</a>
                 </p>
             </article>
         </section>

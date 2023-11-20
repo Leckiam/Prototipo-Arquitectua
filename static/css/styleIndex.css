@@ -65,7 +65,7 @@ p {
     padding: 0 100px;
 }
 
-.btn {
+.btn-more-info {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 40px;
@@ -75,7 +75,7 @@ p {
     background: #DA1DE9;
 }
 
-.btn:hover {
+.btn-more-info:hover {
     background: #db1de9c9;
 }
 
