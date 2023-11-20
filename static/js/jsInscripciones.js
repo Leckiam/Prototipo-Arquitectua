@@ -1,9 +1,9 @@
 let listaUsuarios = [
-    new Usuario('21.347.632-K', 'mai.salto@gmail.com', 'Maikel Salto', 19, 932547238, 'Condominio Costa del Mar - Manuel Francke, Quintero'),
-    new Usuario('20.345.670-K', 'ale.puente@gmail.com', 'Alejandro Puente', 23, 912341234, 'Condominio Costa del Mar - Manuel Francke, Quintero'),
-    new Usuario('20.345.678-K', 'alf.asfalto@gmail.com', 'Alfredo Asfalto', 24, 912344321, 'Condominio Costa del Mar - Manuel Francke, Quintero'),
-    new Usuario('21.345.696-K', 'mar.tirado@gmail.com', 'Marcelo Tirado', 20, 912438765, 'Condominio Costa del Mar - Manuel Francke, Quintero'),
-    new Usuario('21.345.678-K', 'mat.polako@gmail.com', 'Matías Polako', 29, 912345678, 'Condominio Costa del Mar - Manuel Francke, Quintero'),
+    ['21.347.632-K', 'mai.salto@gmail.com', 'Maikel Salto', 19, 932547238, 'Condominio Costa del Mar - Manuel Francke, Quintero'],
+    ['20.345.670-K', 'ale.puente@gmail.com', 'Alejandro Puente', 23, 912341234, 'Condominio Costa del Mar - Manuel Francke, Quintero'],
+    ['20.345.678-K', 'alf.asfalto@gmail.com', 'Alfredo Asfalto', 24, 912344321, 'Condominio Costa del Mar - Manuel Francke, Quintero'],
+    ['21.345.696-K', 'mar.tirado@gmail.com', 'Marcelo Tirado', 20, 912438765, 'Condominio Costa del Mar - Manuel Francke, Quintero'],
+    ['21.345.678-K', 'mat.polako@gmail.com', 'Matías Polako', 29, 912345678, 'Condominio Costa del Mar - Manuel Francke, Quintero'],
 ];
 function infoInscripcion(listaInfo,index) {
     let itemProjectContenido = `
