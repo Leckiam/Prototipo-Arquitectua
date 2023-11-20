@@ -56,11 +56,11 @@ function verDetalleCertif(boolean){
         certificados.innerHTML= `
             <button class="rounded" style="background-color: black; color: #ffffff;" onclick="verDetalleCertif(false)">Volver</button>
             <div style="display: flex; justify-content: center; align-items: center;">
-                <img src="static/img/certificados/certificado de residencia.png" alt="" height="750">
+                <img src="../../../static/img/certificados/certificado de residencia.png" alt="" height="750">
             </div>
         `;
     } else {
-        certificados.innerHTML = respaldoCertif;
+        certificados.innerHTML = respaldoCertif.innerHTML;
     }
     
 }

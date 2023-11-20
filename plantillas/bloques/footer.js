@@ -6,5 +6,5 @@ export function cargarFooter() {
             </div>
         </footer>
     `;
-    document.body = footer;
+    document.body.appendChild(footer);
 }
