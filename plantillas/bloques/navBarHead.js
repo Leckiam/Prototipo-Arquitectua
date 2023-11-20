@@ -60,11 +60,11 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto-custom">`;
     //Listar Opciones del NavBar
-    let listaOpt = ['Inicio', 'Nosotros', 'Directiva', 'Noticias', 'Actividades', 'Contacto'];
+    let listaOpt = ['inicio', 'nosotros', 'directiva', 'noticias', 'actividades', 'contacto'];
     for (let i = 0; i < listaOpt.length; i++) {
         let href = listaOpt[i] + ".html";
         if (nombreArchivo == 'index.html') {
-            if (listaOpt[i] == 'Inicio' || listaOpt[i] == 'Directiva' || listaOpt[i] == 'Contacto') {
+            if (listaOpt[i] == 'inicio' || listaOpt[i] == 'directiva' || listaOpt[i] == 'contacto') {
                 href = "#" + listaOpt[i];
             }
             navBar = navBar + `
@@ -72,7 +72,7 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
                     <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i] + `</a>
                 </li>`
         } else {
-            if (!(listaOpt[i] == 'Inicio' || listaOpt[i] == 'Directiva' || listaOpt[i] == 'Contacto')) {
+            if (!(listaOpt[i] == 'inicio' || listaOpt[i] == 'directiva' || listaOpt[i] == 'contacto')) {
                 navBar = navBar + `
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i] + `</a>
