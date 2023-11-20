@@ -13,7 +13,7 @@ function infoInscripcion(listaInfo,index) {
         <td style="width: 60px;">I-${index}</td>
         <td>${listaInfo[0]}</td>
         <td>${nombre}</td>
-        <td><button type="button" class="btnVerProject rounded" onclick="verDetalleInscript(true,'${JSON.stringify(listaInfo[1])}')">Ver Datos</button></td>
+        <td><button type="button" class="btnVerProject rounded" onclick="verDetalleInscript(true,'${index}')">Ver Datos</button></td>
         <td><button type="button" class="btnAprob rounded"><a onclick="aprobar(${index},'${nombre}')">Aprobar</a></button></td>
         <td><input style="width:100%;height: auto;padding: 0px;" value="" id="justific${index}"></td>
         <td><button type="button" class="btnRecha rounded"><a onclick="rechazar(${index},'${nombre}')">Rechazar</a></button></td>
@@ -31,10 +31,6 @@ function addDatoTabla(){
     let dato6 = ['15-10-2023',listaUsuarios[5]];
     let listaProyecto=[dato1,dato2,dato3,dato4,dato5,dato6];
     for (let i = 0; i < listaProyecto.length; i++) {
-        console.log(listaProyecto);
-        console.log(listaProyecto.length);
-        console.log(i);
-        console.log(listaProyecto[i]);
         table.innerHTML = table.innerHTML + infoInscripcion(listaProyecto[i],i);
     }
 }
@@ -61,9 +57,9 @@ function rechazar(id,nombre){
     }
 }
 
-function verDetalleInscript(boolean, listaInfo){
+function verDetalleInscript(boolean, index){
+    let listaInfo = listaUsuarios[index]
     console.log(listaInfo)
-    listaInfo = JSON.parse(listaInfo);
     let inscripts = document.getElementsByClassName('container')[0];
     if (boolean==true) {
         respaldoInscript = inscripts.cloneNode(true);
