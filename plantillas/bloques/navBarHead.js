@@ -20,7 +20,7 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
           <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="verPerfil.html">Ver Perfil</a>
-            <a class="dropdown-item" onclick="logOut("${space}")">Cerrar Sesión</a>
+            <a class="dropdown-item" hreg="https://leckiam.github.io/Prototipo-Arquitectua/plantillas/Guest/index.html">Cerrar Sesión</a>
             </li>
           </ul>
         </li>`;
