@@ -66,27 +66,27 @@ function verDetalleInscript(boolean, listaInfo){
                     <thead class="table-dark" style="text-align: center;">
                         <tr>
                             <td scope="col">RUT</td>
-                            <td scope="col">${listaInfo[0]}</td>
+                            <td scope="col">${listaInfo[1][0]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Correo</td>
-                            <td scope="col">${listaInfo[1]}</td>
+                            <td scope="col">${listaInfo[1][1]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Nombre</td>
-                            <td scope="col">${listaInfo[2]}</td>
+                            <td scope="col">${listaInfo[1][2]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Edad</td>
-                            <td scope="col">${listaInfo[3]}</td>
+                            <td scope="col">${listaInfo[1][3]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Celular</td>
-                            <td scope="col">${listaInfo[4]}</td>
+                            <td scope="col">${listaInfo[1][4]}</td>
                         </tr>
                         <tr>
                             <td scope="col">Domicilio</td>
-                            <td scope="col">${listaInfo[5]}</td>
+                            <td scope="col">${listaInfo[1][5]}</td>
                         </tr>
                     </thead>
                 </table>
