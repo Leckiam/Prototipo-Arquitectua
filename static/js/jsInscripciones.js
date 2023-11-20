@@ -7,7 +7,7 @@ let listaUsuarios = [
 ];
 function infoInscripcion(listaInfo,index) {
     console.log(listaInfo[1]);
-    console.log(listaInfo[1][2]);
+    console.log(JSON.parse(listaInfo[1])[2]);
     let nombre = JSON.parse(listaInfo[1])[2];
     let itemProjectContenido = `
     <tr style="background: #d1d1d1; text-align: center;" class="item${index}">
