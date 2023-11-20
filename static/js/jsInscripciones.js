@@ -15,7 +15,7 @@ function infoInscripcion(listaInfo,index) {
         <td style="width: 60px;">I-${index}</td>
         <td>${listaInfo[0]}</td>
         <td>${nombre}</td>
-        <td><button type="button" class="btnVerProject rounded" onclick="verDetalleInscript(true,${listaInfo[1]})">Ver Datos</button></td>
+        <td><button type="button" class="btnVerProject rounded" onclick="verDetalleInscript(true,'${listaInfo[1]}')">Ver Datos</button></td>
         <td><button type="button" class="btnAprob rounded"><a onclick="aprobar(${index},'${nombre}')">Aprobar</a></button></td>
         <td><input style="width:100%;height: auto;padding: 0px;" value="" id="justific${index}"></td>
         <td><button type="button" class="btnRecha rounded"><a onclick="rechazar(${index},'${nombre}')">Rechazar</a></button></td>
@@ -44,7 +44,7 @@ function aprobar(id,nombre){
     let table = document.getElementById('solicitudes');
     let item = table.getElementsByClassName('item'+id)
     alert('La Inscripción I-'+id+' '+nombre+' ha sido aprobado')
-    item[id].remove();
+    item.remove();
 }
 function validarJustificacion(id){
     let justific = document.getElementById('justific'+id);
@@ -59,10 +59,50 @@ function rechazar(id,nombre){
     let item = table.getElementsByClassName('item'+id)
     if (validarJustificacion(id)) {
         alert('La Inscripción I-'+id+' '+nombre+' ha sido rechazada')
-        item[id].remove();
+        item.remove();
     }
 }
 
 function verDetalleInscript(boolean, listaInfo){
-    alert('xd')
+    console.log(listaInfo)
+    listaInfo = JSON.parse(listaInfo);
+    let inscripts = document.getElementsByClassName('container')[0];
+    if (boolean==true) {
+        respaldoInscript = inscripts.cloneNode(true);
+        inscripts.innerHTML= `
+            <button class="rounded" style="background-color: black; color: #ffffff;" onclick="verDetalleInscript(false)">Volver</button>
+            <div class="row mb-3 respond">
+                <table class="table table-bordered" id="solicitudes">
+                    <thead class="table-dark" style="text-align: center;">
+                        <tr>
+                            <td scope="col">RUT</td>
+                            <td scope="col">${listaInfo[0]}</td>
+                        </tr>
+                        <tr>
+                            <td scope="col">Correo</td>
+                            <td scope="col">${listaInfo[1]}</td>
+                        </tr>
+                        <tr>
+                            <td scope="col">Nombre</td>
+                            <td scope="col">${listaInfo[2]}</td>
+                        </tr>
+                        <tr>
+                            <td scope="col">Edad</td>
+                            <td scope="col">${listaInfo[3]}</td>
+                        </tr>
+                        <tr>
+                            <td scope="col">Celular</td>
+                            <td scope="col">${listaInfo[4]}</td>
+                        </tr>
+                        <tr>
+                            <td scope="col">Domicilio</td>
+                            <td scope="col">${listaInfo[5]}</td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        `;
+    } else {
+        inscripts.innerHTML = respaldoInscript.innerHTML;
+    }
 }
