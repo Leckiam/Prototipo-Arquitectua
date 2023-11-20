@@ -2,7 +2,7 @@ let respaldoCertif = document.getElementsByClassName('container')[0];
 
 function infoCertificado(listaInfo,index) {
     let itemProjectContenido = `
-    <tr style="background: #d1d1d1; text-align: center;" class="item${id}">
+    <tr style="background: #d1d1d1; text-align: center;" class="item${index}">
         <td style="width: 60px;">C-${index}</td>
         <td>${listaInfo[0]}</td>
         <td>${listaInfo[1]}</td>
