@@ -1,6 +1,6 @@
 function infoProyecto(listaInfo,index) {
     let itemProjectContenido = `
-    <tr style="background: #d1d1d1; text-align: center;" class="item">
+    <tr style="background: #d1d1d1; text-align: center;" class="item${id}">
         <td style="width: 60px;">P-${index}</td>
         <td>${listaInfo[0]}</td>
         <td>${listaInfo[1]}</td>
@@ -29,13 +29,13 @@ function addDatoTabla(){
 }
 function aprobarProyecto(id,nombre){
     let table = document.getElementById('proyectos');
-    let item = table.getElementsByClassName('item')
+    let item = table.getElementsByClassName('item'+id)
     alert('El proyecto P-'+id+' '+nombre+' ha sido aprobado')
     item[id].remove();
 }
 function rechazarProyecto(id,nombre){
     let table = document.getElementById('proyectos');
-    let item = table.getElementsByClassName('item')
+    let item = table.getElementsByClassName('item'+id)
     alert('El proyecto P-'+id+' '+nombre+' ha sido rechazado')
     item[id].remove();
 }

@@ -1,7 +1,7 @@
 import { getRoles } from './infoUsers.js';
 
 export function cargarNavBar(isLogin, nameUser, numRol) {
-    console.log('navBar:'+numRol)
+    console.log('navBar:' + numRol)
     let listaRoles = getRoles();
     let nameRol = listaRoles[numRol];
     let btnLogOut = "";
@@ -80,7 +80,7 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
             }
         }
     }
-    if (numRol <= 1) {
+    if (numRol >= 0 && numRol <= 1) {
         const a_projectos = `<a class="dropdown-item" href="solicitarProject.html">Proyectos</a>`;
         const a_register = `<a class="dropdown-item" href="register.html">Inscribirse</a>`;
         let optAdd = ``;

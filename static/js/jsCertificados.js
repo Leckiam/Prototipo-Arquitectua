@@ -1,6 +1,8 @@
+let respaldoCertif = document.getElementsByClassName('container')[0];
+
 function infoCertificado(listaInfo,index) {
     let itemProjectContenido = `
-    <tr style="background: #d1d1d1; text-align: center;" class="item">
+    <tr style="background: #d1d1d1; text-align: center;" class="item${id}">
         <td style="width: 60px;">C-${index}</td>
         <td>${listaInfo[0]}</td>
         <td>${listaInfo[1]}</td>
@@ -27,7 +29,7 @@ function addDatoTabla(){
 }
 function aprobar(id,nombre){
     let table = document.getElementById('solicitudes');
-    let item = table.getElementsByClassName('item')
+    let item = table.getElementsByClassName('item'+id)
     alert('El Certificado C-'+id+' '+nombre+' ha sido aprobado')
     item[id].remove();
 }
@@ -41,9 +43,24 @@ function validarJustificacion(id){
 }
 function rechazar(id,nombre){
     let table = document.getElementById('solicitudes');
-    let item = table.getElementsByClassName('item')
+    let item = table.getElementsByClassName('item'+id)
     if (validarJustificacion(id)) {
         alert('El Certificado C-'+id+' '+nombre+' ha sido rechazado')
         item[id].remove();
     }
+}
+function verDetalleCertif(boolean){
+    let certificados = document.getElementsByClassName('container')[0];
+    if (boolean==true) {
+        respaldoCertif = certificados.cloneNode(true);
+        certificados.innerHTML= `
+            <button class="rounded" style="background-color: black; color: #ffffff;">Volver</button>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="static/img/certificados/certificado de residencia.png" alt="" height="750">
+            </div>
+        `;
+    } else {
+        certificados.innerHTML = respaldoCertif;
+    }
+    
 }

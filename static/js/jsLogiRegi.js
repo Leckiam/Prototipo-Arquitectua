@@ -12,16 +12,19 @@ function getUser(correo){
     const urlBase = "../Directiva/";
     if (correo.toLowerCase()=='aug.veniam@gmail.com') {
         //Augusto Veniam - Presidente
-        window.location.href=urlBase+"Presidente/index.html"
+        window.location.href=urlBase+"Presidente/index.html";
     } else if (correo.toLowerCase()=='gal.guzman@gmail.com'){
         //Galit Guzman - Secretaria
-        window.location.href=urlBase+"Secretario/index.html"
+        window.location.href=urlBase+"Secretario/index.html";
     } else if (correo.toLowerCase()=='suz.labor@gmail.com'){
         //Suzana Labor - Tesorera
-        window.location.href=urlBase+"Tesorero/index.html"
+        window.location.href=urlBase+"Tesorero/index.html";
     } else if (correo.toLowerCase()=='ric.parker@gmail.com') {
         //Rick Parker - Miembro General
-        window.location.href=urlBase+"../MiembGeneral/index.html"
+        window.location.href=urlBase+"../MiembGeneral/index.html";
+    } else if (correo.toLowerCase()=='lau.puentes@gmail.com') {
+        //Lautaro Puentes - Vecino
+        window.location.href=urlBase+"../Vecino/index.html";
     } else {
         alert('No existe ningun miembro registrado con estos datos')
     }
@@ -31,12 +34,12 @@ function validarRelleno(rut,edad,nombre,archivo){
         if (edad>=14) {
             if (nombre.trim().length>=4) {
                 if (archivo.files[0]) {
-                    console.log('vamos okey')
+                    console.log('vamos okey');
                     return true;
                 } else {
-                    console.log('nada okey')
+                    console.log('nada okey');
                 }
-                console.log('casi todo okey')
+                console.log('casi todo okey');
             }
         }
     }
