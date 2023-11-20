@@ -69,13 +69,13 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
             }
             navBar = navBar + `
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i] + `</a>
+                    <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i].toLowerCase(); + `</a>
                 </li>`
         } else {
             if (!(listaOpt[i] == 'Inicio' || listaOpt[i] == 'Directiva')) {
                 navBar = navBar + `
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i] + `</a>
+                    <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i].toLowerCase(); + `</a>
                 </li>`
             }
         }
