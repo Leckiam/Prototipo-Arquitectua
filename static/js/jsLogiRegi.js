@@ -25,6 +25,9 @@ function getUser(correo){
     } else if (correo.toLowerCase()=='lau.puentes@gmail.com') {
         //Lautaro Puentes - Vecino
         window.location.href=urlBase+"../Vecino/index.html";
+    } else if (correo.toLowerCase()=='mar.miller@gmail.com') {
+        //Mario Miller - Encargado Finanzas
+        window.location.href=urlBase+"../Municipal/index.html";
     } else {
         alert('No existe ningun miembro registrado con estos datos')
     }

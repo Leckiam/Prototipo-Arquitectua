@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanzas Junta de Vecinos</title>
+    <link rel="stylesheet" href="../../static/css/styleFinanzas.css">
+</head>
+<body>
+    <header>
+        <div class="box-container">
+            <a class="logo">JVS</a>
+            <a href="index.html"> Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="actividades.html">Actividades</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="finanza.html">Finanzas</a>
+        </div>
+    </header>
+    <div class="finanzas-section">
+        <h2 onclick="toggleContent('finanzas')">Registro de Ingresos</h2>
+        <div class="finanzas-content">
+            <p class="balance">Saldo actual: $1,200.00</p>
+            
+            <!-- Tabla de Registro de Ingresos -->
+            <table class="ingresos-table finanzas-table">
+                <thead>
+                    <tr>
+                        <th>Subsección de Ingresos Anual</th>
+                        <th>Año 2020</th>
+                        <th>Año  2021</th>
+                        <th>Año 2022</th>
+                        <th>Año 2023</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> Actividades Junta de Vecinos</td>
+                        <td>$120.000</td>
+                        <td>$150.000</td>
+                        <td>$180.000</td>
+                        <td>$90.000</td>
+                    </tr>
+                    <tr>
+                        <td>Cooperativa municipal</td>
+                        <td>$80.000</td>
+                        <td>$200.000</td>
+                        <td>$130.000</td>
+                        <td>$110.000</td>
+                    </tr>
+                    <tr>
+                        <td>Eventos Financieros</td>
+                        <td>$100.000</td>
+                        <td>$120.000</td>
+                        <td>$160.000</td>
+                        <td>$80.000</td>
+                    </tr>
+                    <!-- Agrega más filas según sea necesario -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Sección de Control de Gastos -->
+    <div class="gastos-section">
+        <h2 onclick="toggleContent('gastos')">Control de Gastos</h2>
+        <div class="gastos-content">
+            <p>En la sección de control de gastos puedes agregar y visualizar tus gastos mensuales.</p>
+            
+            <!-- Tabla de Control de Gastos -->
+            <table class="gastos-table">
+                <thead>
+                    <tr>
+                        <th>Subsección De Gastos Anual</th>
+                        <th>Año 2020</th>
+                        <th>Año 2021</th>
+                        <th>Año 2022</th>
+                        <th>Año 2023</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gran Gasto</td>
+                        <td>$100.000</td>
+                        <td>$150.000</td>
+                        <td>$120.000</td>
+                        <td>$90.000</td>
+                    </tr>
+                    <tr>
+                        <td>Evento Bienestar</td>
+                        <td>$80.000</td>
+                        <td>$200.000</td>
+                        <td>$130.000</td>
+                        <td>$110.000</td>
+                    </tr>
+                    <tr>
+                        <td>Actividad Vecinal Navideña</td>
+                        <td>$120.000</td>
+                        <td>$180.000</td>
+                        <td>$160.000</td>
+                        <td>$70.000</td>
+                    </tr>
+                    <!-- Agrega más filas según sea necesario -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Sección de Gestión de Ganancias -->
+    <div class="ganancias-section">
+        <h2 onclick="toggleContent('ganancias')">Gestión de Ganancias</h2>
+        <div class="ganancias-content">
+            <p>En la sección de gestión de ganancias puedes agregar y visualizar tus fuentes de ingresos.</p>     
+            <!-- Tabla de Gestión de Ganancias -->
+            <table class="ganancias-table">
+                <thead>
+                    <tr>
+                        <th>Subsección Ganancias</th>
+                        <th>Año 2020</th>
+                        <th>Año 2021</th>
+                        <th>Año 2022</th>
+                        <th>Año 2023</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fondos 1</td>
+                        <td>$200.000</td>
+                        <td>$250.000</td>
+                        <td>$180.000</td>
+                        <td>$120.000</td>
+                    </tr>
+                    <tr>
+                        <td>Recaudacion</td>
+                        <td>$150.000</td>
+                        <td>$180.000</td>
+                        <td>$200.000</td>
+                        <td>$100.000</td>
+                    </tr>
+                    <!-- Agrega más filas según sea necesario -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+<!-- Nueva Sección con Gráficos -->
+    <div class="graficos-section">
+        <div class="grafico-box">
+            <img src="../../static/img/Finanzas/ig.jpg" alt="Gráfico de Ingresos">
+            <h3>Ingresos</h3>
+            <p>Visualiza los ingresos de la junta de vecinos.</p>
+        </div>
+        <div class="grafico-box">
+            <img src="../../static/img/Finanzas/jv.png" alt="Gráfico de Gastos">
+            <h3>Gastos</h3>
+            <p>Analiza los gastos mensuales de la junta.</p>
+        </div>
+        <div class="grafico-box">
+            <img src="../../static/img/Finanzas/vh.png" alt="Gráfico de Ganancias">
+            <h3>Ganancias</h3>
+            <p>Consulta las ganancias acumuladas.</p>
+        </div>
+    </div>
+
+    <script type="module">
+        import * as block from '../bloques/block.js';
+        block.cargarFooter();
+    </script>
+
+    <script>
+        function toggleContent(section) {
+            var content = document.querySelector('.' + section + '-content');
+            content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

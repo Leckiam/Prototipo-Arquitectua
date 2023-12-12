@@ -5,7 +5,8 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
     let listaRoles = getRoles();
     let nameRol = listaRoles[numRol];
     let btnLogOut = "";
-    let gestionar = ""
+    let gestionar = "";
+    let finanzas = "";
     let navBar = "";
     let space = "";
     const rutaCompleta = window.location.pathname;
@@ -30,7 +31,7 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
                 <a class="nav-link active" aria-current="page" href="login.html">Iniciar Sesion</a>
             </li>`;
     }
-    if (numRol >= 2) {
+    if (numRol >= 3) {
         space = "../";
         gestionar = `
         <li class="nav-item dropdown">
@@ -71,6 +72,12 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
                 <a class="nav-link active" aria-current="page" href="`+ href + `">` + listaOpt[i] + `</a>
             </li>`;
     }
+    if (numRol >= 2) {
+        navBar = navBar + `
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="finanza.html">Finanzas</a>
+            </li>`;
+    }
     if (numRol >= 0 && numRol <= 1) {
         const a_projectos = `<a class="dropdown-item" href="solicitarProject.html">Proyectos</a>`;
         const a_register = `<a class="dropdown-item" href="register.html">Inscribirse</a>`;
@@ -95,7 +102,7 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
         navBar = navBar + optSolicitud;
     }
 
-    navBar = navBar + gestionar + btnLogOut
+    navBar = navBar + gestionar + finanzas + btnLogOut
     navBar = navBar + `
             </ul>
         </div>
