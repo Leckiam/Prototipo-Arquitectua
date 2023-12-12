@@ -14,3 +14,6 @@ ric.parker@gmail.com
 
 --Lautaro Puentes - Vecino
 lau.puentes@gmail.com
+
+--Mario Miller - Encargado Finanzas
+mar.miller@gmail.com
