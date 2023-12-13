@@ -74,11 +74,15 @@
             // Aquí deberías implementar la lógica de procesamiento de pagos
             // Puedes usar una API de procesamiento de pagos como Stripe, PayPal, etc.
             // En este ejemplo, simplemente mostramos un mensaje de éxito y actualizamos el historial.
+            var monto = document.getElementById("monto").value;
+            var nombre = document.getElementById("nombre").value || "Usuario"; // Si no se proporciona un nombre, utilizar "Usuario"
+            if (monto == 0) {
+            alert("No se puede dar un aporte de $0 pesos");
+                return;
+            }
             alert("Pago realizado con éxito. ¡Gracias por tu aporte voluntario!");
 
             // Actualizar historial con monto genérico
-            var monto = document.getElementById("monto").value;
-            var nombre = document.getElementById("nombre").value || "Usuario"; // Si no se proporciona un nombre, utilizar "Usuario"
             actualizarHistorial(nombre, monto);
 
             // Limpiar formulario
