@@ -43,30 +43,31 @@
 
         <button type="submit" onclick="realizarPago()">Realizar Pago</button>
     </form>
-
-    <table class="gastos-table" id="historial">
-        <thead>
-            <tr>
-                <th>Usuario</th>
-                <th>Pago ($)</th>
-            </tr>
-        </thead>
-        <tbody id="historialLista">
-            <tr>
-                <td>Juan</td>
-                <td>$50000</td>
-            </tr>
-            <tr>
-                <td>María</td>
-                <td>$30000</td>
-            </tr>
-            <tr>
-                <td>Pablo</td>
-                <td>$20000</td>
-            </tr>
-            <!-- Agrega más filas según sea necesario -->
-        </tbody>
-    </table>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <table class="gastos-table" id="historial">
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Pago ($)</th>
+                </tr>
+            </thead>
+            <tbody id="historialLista">
+                <tr>
+                    <td>Juan</td>
+                    <td>$50000</td>
+                </tr>
+                <tr>
+                    <td>María</td>
+                    <td>$30000</td>
+                </tr>
+                <tr>
+                    <td>Pablo</td>
+                    <td>$20000</td>
+                </tr>
+                <!-- Agrega más filas según sea necesario -->
+            </tbody>
+        </table>
+    </div>
 
     <script>
         function realizarPago() {
