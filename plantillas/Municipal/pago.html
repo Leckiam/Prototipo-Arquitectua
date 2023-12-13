@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pagos</title>
+    <script type="module">
+        import * as block from '../bloques/block.js';
+        block.cargarHead();
+    </script>
+    <link rel="stylesheet" href="../../static/css/stylePago.css">
+</head>
+
+<body>
+
+    <h2 style="text-align: center; color: #333;">Realizar Pago de Aporte Voluntario</h2>
+
+    <form id="paymentForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value="Mario Miller" readonly required>
+        
+        <label for="bono">Tipo de bono:</label>
+        <select name="bono" id="bono">
+            <option value="1">Subvenciones</option>
+            <option>Fondo fiscal</option>
+            <option>Aportes</option>
+        </select>
+
+        <label for="monto">Monto:</label>
+        <input type="number" id="monto" name="monto" min="1" required>
+
+        <label for="tarjeta">Número de Tarjeta:</label>
+        <input type="text" id="tarjeta" name="tarjeta" placeholder="XXXX-XXXX-XXXX-XXXX"
+            pattern="\d{4}-\d{4}-\d{4}-\d{4}" required>
+
+        <label for="vencimiento">Fecha de Vencimiento:</label>
+        <input type="text" id="vencimiento" name="vencimiento" placeholder="MM/AA" pattern="\d{2}/\d{2}" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" placeholder="123" pattern="\d{3}" required>
+
+        <button type="submit" onclick="realizarPago()">Realizar Pago</button>
+    </form>
+
+    <table class="gastos-table" id="historial">
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Pago ($)</th>
+            </tr>
+        </thead>
+        <tbody id="historialLista">
+            <tr>
+                <td>Juan</td>
+                <td>$50000</td>
+            </tr>
+            <tr>
+                <td>María</td>
+                <td>$30000</td>
+            </tr>
+            <tr>
+                <td>Pablo</td>
+                <td>$20000</td>
+            </tr>
+            <!-- Agrega más filas según sea necesario -->
+        </tbody>
+    </table>
+
+    <script>
+        function realizarPago() {
+            // Aquí deberías implementar la lógica de procesamiento de pagos
+            // Puedes usar una API de procesamiento de pagos como Stripe, PayPal, etc.
+            // En este ejemplo, simplemente mostramos un mensaje de éxito y actualizamos el historial.
+            alert("Pago realizado con éxito. ¡Gracias por tu aporte voluntario!");
+
+            // Actualizar historial con monto genérico
+            var monto = document.getElementById("monto").value;
+            var nombre = document.getElementById("nombre").value || "Usuario"; // Si no se proporciona un nombre, utilizar "Usuario"
+            actualizarHistorial(nombre, monto);
+
+            // Limpiar formulario
+            document.getElementById("paymentForm").reset();
+        }
+
+        function actualizarHistorial(nombre, monto) {
+            var historialLista = document.getElementById("historialLista");
+            var nuevaAportacion = document.createElement("tr");
+            nuevaAportacion.innerHTML = `
+                <td>${nombre}</td>
+                <td>$${monto}</td>
+            `;
+            historialLista.insertBefore(nuevaAportacion, historialLista.firstChild);
+
+            // Limitar el historial a las últimas 3 aportaciones
+            if (historialLista.children.length > 3) {
+                historialLista.removeChild(historialLista.lastChild);
+            }
+        }
+    </script>
+    <script type="module">
+        import * as block from '../bloques/block.js';
+        block.cargarNavBar(true, 'Mario Miller', 2);
+        block.cargarFooter();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

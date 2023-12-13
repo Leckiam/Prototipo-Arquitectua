@@ -22,6 +22,12 @@ h1{
     color: #1a2537;
     font-size: 40px;
 }
+select{
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
 input[type="text"],
 input[type="number"],
 input[type="email"],

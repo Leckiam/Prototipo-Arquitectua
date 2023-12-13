@@ -2,19 +2,23 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('../../static/img/relleno/fonod_azul.jpg'); /* Reemplaza 'asd.jpg' con la ruta de tu imagen */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el cuerpo */
+    background-image: url('../../static/img/relleno/fonod_azul.jpg');
+    /* Reemplaza 'asd.jpg' con la ruta de tu imagen */
+    background-size: cover;
+    /* Ajusta la imagen para cubrir todo el cuerpo */
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* 100% del alto de la ventana */
-    color: #333; /* Color de texto predeterminado */
+    min-height: 100vh;
+    /* 100% del alto de la ventana */
+    color: #333;
+    /* Color de texto predeterminado */
 }
 
-header{
+header {
     background-color: rgb(10, 3, 9);
 }
 
-header .logo{
+header .logo {
     margin: 0;
     padding: 25px 30px;
     font-weight: bold;
@@ -22,39 +26,42 @@ header .logo{
     font-size: 1.6em;
 }
 
-header .container{
+header .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-header nav{
+header nav {
     display: flex;
     margin-right: 10px;
 
 }
 
-header a{
+header a {
     padding: 5px 12px;
     text-decoration: none;
     font-weight: bold;
     color: rgb(255, 255, 255);
 }
 
-header a:hover{
+header a:hover {
     color: rgb(219, 22, 193);
 }
 
 .finanzas-section {
-    background-color: rgba(12, 0, 1, 0.5); /* Púrpura */
+    background-color: rgba(12, 0, 1, 0.5);
+    /* Púrpura */
 }
 
 .gastos-section {
-    background-color: rgba(0, 0, 2, 0.5); /* Índigo */
+    background-color: rgba(0, 0, 2, 0.5);
+    /* Índigo */
 }
 
 .ganancias-section {
-    background-color:  rgba(20, 0, 3, 0.5); /* Azul */
+    background-color: rgba(20, 0, 3, 0.5);
+    /* Azul */
 }
 
 .finanzas-section h2,
@@ -65,7 +72,8 @@ header a:hover{
     margin: 0;
     color: #fff;
     text-align: left;
-    border-color: #9c27b0; /* Color del borde para la sección de Finanzas */
+    border-color: #9c27b0;
+    /* Color del borde para la sección de Finanzas */
 }
 
 .finanzas-content,
@@ -73,19 +81,24 @@ header a:hover{
 .ganancias-content {
     padding: 20px;
     display: none;
-    text-align: right; /* Alinea el texto hacia la derecha */
-    background-color:  rgba(0, 0, 0, 0.6); /* Fondo claro semi-transparente */
+    text-align: right;
+    /* Alinea el texto hacia la derecha */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fondo claro semi-transparente */
     border-radius: 8px;
-    margin-top: 10px; /* Espacio entre el encabezado y el contenido */
+    margin-top: 10px;
+    /* Espacio entre el encabezado y el contenido */
     color: #fff;
-    border-color: #9c27b0; /* Color del borde para la sección de Finanzas */
+    border-color: #9c27b0;
+    /* Color del borde para la sección de Finanzas */
 
 }
 
 .finanzas-content ul,
 .gastos-content p,
 .ganancias-content p {
-    margin: 0; /* Elimina el margen predeterminado */
+    margin: 0;
+    /* Elimina el margen predeterminado */
 }
 
 /* Tabla de Control de Gastos */
@@ -95,7 +108,8 @@ header a:hover{
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    border: 2px solid #ddd; /* Borde predeterminado */
+    border: 2px solid #ddd;
+    /* Borde predeterminado */
     border-radius: 8px;
 }
 
@@ -111,15 +125,18 @@ header a:hover{
 }
 
 .finanzas-table {
-    border-color: #9c27b0; /* Color del borde para la sección de Finanzas */
+    border-color: #9c27b0;
+    /* Color del borde para la sección de Finanzas */
 }
 
 .gastos-table {
-    border-color: #673ab7; /* Color del borde para la sección de Gastos */
+    border-color: #673ab7;
+    /* Color del borde para la sección de Gastos */
 }
 
 .ganancias-table {
-    border-color: #2196f3; /* Color del borde para la sección de Ganancias */
+    border-color: #2196f3;
+    /* Color del borde para la sección de Ganancias */
 }
 
 /* Footer Styles */
@@ -128,8 +145,10 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: right;
-    margin-top: auto; /* Empuja el pie de página hacia abajo */		
-} 
+    margin-top: auto;
+    /* Empuja el pie de página hacia abajo */
+}
+
 .graficos-section {
     display: flex;
     justify-content: space-around;
@@ -139,7 +158,8 @@ footer {
 .grafico-box {
     width: 30%;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro transparente */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo oscuro transparente */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -151,4 +171,43 @@ footer {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
-}    
+}
+
+
+.historial-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    /* Espacio entre la sección de historial y las demás secciones */
+    color: #fff;
+}
+
+.historial-section h2 {
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+    color: #fff;
+    text-align: left;
+    border-color: #9c27b0;
+    /* Color del borde para la sección de historial */
+}
+
+.historial-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    /* Borde predeterminado */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fondo claro semi-transparente */
+}
+
+.historial-section th,
+.historial-section td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
