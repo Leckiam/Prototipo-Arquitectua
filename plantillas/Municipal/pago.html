@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+<head id="headBlock">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Pagos</title>
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark" id="navBarBlock"></nav>
     <h2 style="text-align: center; color: #333;">Realizar Pago de Aporte Voluntario</h2>
 
     <form id="paymentForm">
@@ -28,7 +28,7 @@
         </select>
 
         <label for="monto">Monto:</label>
-        <input type="number" id="monto" name="monto" min="1" required>
+        <input type="number" id="monto" name="monto" value="0" min="1" required>
 
         <label for="tarjeta">Número de Tarjeta:</label>
         <input type="text" id="tarjeta" name="tarjeta" placeholder="XXXX-XXXX-XXXX-XXXX"

@@ -64,7 +64,7 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
     let listaOpt = ['Inicio', 'Nosotros', 'Noticias', 'Actividades'];
     for (let i = 0; i < listaOpt.length; i++) {
         let href = listaOpt[i].toLowerCase() + ".html";
-        if (listaOpt[i]=='Inicio'){
+        if (listaOpt[i] == 'Inicio') {
             href = 'index.html'
         }
         navBar = navBar + `
@@ -77,6 +77,12 @@ export function cargarNavBar(isLogin, nameUser, numRol) {
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="finanza.html">Finanzas</a>
             </li>`;
+        if (numRol == 2) {
+            navBar = navBar + `
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="pago.html">Pago</a>
+            </li>`;
+        }
     }
     if (numRol >= 0 && numRol <= 1) {
         const a_projectos = `<a class="dropdown-item" href="solicitarProject.html">Proyectos</a>`;
