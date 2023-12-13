@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head id="headBlock">
     <meta charset="UTF-8">
@@ -13,13 +13,14 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark" id="navBarBlock"></nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark"
+        id="navBarBlock"></nav>
     <h2 style="text-align: center; color: #333;">Realizar Pago de Aporte Voluntario</h2>
 
     <form id="paymentForm">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" value="Mario Miller" readonly required>
-        
+
         <label for="bono">Tipo de bono:</label>
         <select name="bono" id="bono">
             <option value="1">Subvenciones</option>
@@ -87,9 +88,9 @@
             var historialLista = document.getElementById("historialLista");
             var nuevaAportacion = document.createElement("tr");
             nuevaAportacion.innerHTML = `
-                <td>${nombre}</td>
-                <td>$${monto}</td>
-            `;
+                    <td>${nombre}</td>
+                    <td>$${monto}</td>
+                `;
             historialLista.insertBefore(nuevaAportacion, historialLista.firstChild);
 
             // Limitar el historial a las últimas 3 aportaciones
