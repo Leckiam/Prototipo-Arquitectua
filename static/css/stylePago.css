@@ -1,14 +1,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url(../../static/img/relleno/imagen.jpg);
+    background-image: url(../img/relleno/imagen.jpg);
     background-size: cover;
     background-attachment: fixed;
     margin: 20px;
     background-color: #f4f4f4;
 }
 
-form {
+body form {
     max-width: 400px;
     margin: 0 auto;
     background-color: #333;
@@ -17,25 +17,25 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-label {
+body label {
     display: block;
     margin-bottom: 8px;
     color: white;
 }
-select{
+body select{
     width: 100%;
     padding: 8px;
     margin-bottom: 12px;
     box-sizing: border-box;
 }
-input {
+body input {
     width: 100%;
     padding: 8px;
     margin-bottom: 12px;
     box-sizing: border-box;
 }
 
-button {
+body button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
@@ -44,7 +44,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+body button:hover {
     background-color: #45a049;
 }
 
